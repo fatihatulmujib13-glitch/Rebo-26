@@ -1,0 +1,24 @@
+directories:
+  output: release
+  buildResources: build
+appId: app.rebo26.desktop
+productName: Rebo26
+files:
+  - filter:
+      - main.js
+      - package.json
+win:
+  target:
+    - target: nsis
+      arch:
+        - x64
+    - target: portable
+      arch:
+        - x64
+nsis:
+  oneClick: true
+  perMachine: false
+  allowToChangeInstallationDirectory: false
+  createDesktopShortcut: true
+  createStartMenuShortcut: true
+electronVersion: 37.10.3
