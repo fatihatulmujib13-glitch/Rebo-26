@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react';
 import { ArrowDownToLine, ArrowRight, Check, Laptop, Menu, ShieldCheck, Smartphone, Sparkles } from 'lucide-react';
 
 const downloads = {
-  windows: '/release/Rebo26%201.0.0.exe',
+  windows: '/release/Rebo26%20Setup%201.0.0.exe',
   android: '/release/Rebo26-Android.apk',
 };
 
