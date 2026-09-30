@@ -5,7 +5,7 @@ import path from 'path';
 import {defineConfig} from 'vite';
 
 const releaseDownloads = [
-  'Rebo26 1.0.0.exe',
+  'Rebo26 Setup 1.0.0.exe',
   'Rebo26-Android.apk',
 ];
 
