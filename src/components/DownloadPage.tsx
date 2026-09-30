@@ -37,6 +37,7 @@ export default function DownloadPage() {
           <a href="#features">Features</a>
           <a href="#how-it-works">How it works</a>
           <a href="#install-help">Install guide</a>
+          <a href="/app">Open web app</a>
         </nav>
         <button className="nav-install" onClick={install}>
           Get the app <ArrowRight size={16} />
@@ -55,6 +56,7 @@ export default function DownloadPage() {
                 Download Rebo
                 <span className="button-platform">for {platformLabel}</span>
               </button>
+              <a className="install-secondary" href="/app">Open in browser <ArrowRight size={16} /></a>
             </div>
             <div className="hero-assurance"><ShieldCheck size={16} /> Available for Windows and Android · Always up to date</div>
           </div>
