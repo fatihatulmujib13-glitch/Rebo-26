@@ -47,8 +47,7 @@ let aiClient: GoogleGenAI | null = null;
 
 function getGoogleGenAI(): GoogleGenAI {
   if (!aiClient) {
-    // Hardcoded key as requested by user.
-    const key = process.env.GEMINI_API_KEY || 'AQ.Ab8RN6KXOS9IAmAd3dAX9fqzvRu9aaCYwi25d3cuOz_PPqrUTw';
+    const key = process.env.GEMINI_API_KEY;
     if (!key) {
       throw new Error('GEMINI_API_KEY environment variable is required but was not found.');
     }
