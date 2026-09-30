@@ -465,9 +465,9 @@ function ResearchApp() {
   );
 }
 
-// The research workspace is only available inside the Windows (.exe, Electron) and
-// Android (.apk, WebView) apps. Both load the site with ?native=1, and the user agent
-// confirms it is really the packaged app rather than a regular browser tab.
+// The research workspace opens in any browser at /app, and inside the Windows (.exe,
+// Electron) and Android (.apk, WebView) apps. The packaged apps load the site with
+// ?native=1, and the user agent confirms it is really the packaged app.
 function isPackagedApp() {
   const ua = navigator.userAgent;
   const isElectron = /\bElectron\//i.test(ua);
@@ -485,7 +485,8 @@ function isPackagedApp() {
 }
 
 export default function App() {
-  if (isPackagedApp()) return <ResearchApp />;
+  const path = window.location.pathname.replace(/\/+$/, '');
+  if (path === '/app' || isPackagedApp()) return <ResearchApp />;
   if (window.location.pathname !== '/') window.history.replaceState(null, '', '/');
   return <DownloadPage />;
 }
