@@ -1,3 +1,11 @@
+[build]
+  command = "npm run build:web"
+  publish = "dist"
+
+[functions]
+  # Vite is only used by the local dev server and must not be bundled into the API function.
+  external_node_modules = ["vite"]
+
 [dev]
   command = "npm run dev"
   targetPort = 3000
