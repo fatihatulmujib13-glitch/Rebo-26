@@ -727,7 +727,7 @@ async function startServer() {
   });
 }
 
-if (!process.env.VERCEL) {
+if (!process.env.VERCEL && !process.env.REBO_SERVERLESS) {
   startServer();
 }
 
